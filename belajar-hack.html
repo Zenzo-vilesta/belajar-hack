@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Belajar Hack?</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #0f0;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+      overflow: hidden;
+    }.glitch {
+  font-size: 1.2rem;
+  animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 2px #f00, -2px -2px #0ff; }
+  20% { text-shadow: -2px 2px #0f0, 2px -2px #f0f; }
+  40% { text-shadow: 2px -2px #ff0, -2px 2px #00f; }
+  60% { text-shadow: -1px 1px #fff, 1px -1px #f00; }
+  80% { text-shadow: 1px 1px #0f0, -1px -1px #0ff; }
+  100% { text-shadow: 2px 2px #f00, -2px -2px #0ff; }
+}
+
+button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  background-color: #0f0;
+  color: #000;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #0f0;
+}
+
+video {
+  margin-top: 20px;
+  width: 90%;
+  max-width: 400px;
+  border: 2px solid #0f0;
+  box-shadow: 0 0 10px #0f0;
+  display: none;
+}
+
+.prank-text {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #f0f;
+  display: none;
+}
+
+  </style>
+</head>
+<body>
+  <div class="glitch" id="introText">
+    jangan ego, kalau nak pandai hack kena rajin, setiap hari belajar, bukannya 1 hari belajar terus pandai
+  </div><button id="hackBtn" onclick="playPrank()">belajar hack</button>
+
+  <video id="prankVideo" controls loop>
+    <source src="https://files.catbox.moe/klgt69.mp4" type="video/mp4">
+    Video tak boleh dimainkan.
+  </video>  <div class="prank-text" id="prankText">
+    HAHAHA nak belajar hack ke dek? takkk bolehhh, werkkk 😝😹🫵🏻
+  </div>  <script>
+    function playPrank() {
+      const video = document.getElementById('prankVideo');
+      const text = document.getElementById('prankText');
+      const button = document.getElementById('hackBtn');
+      const intro = document.getElementById('introText');
+
+      button.style.display = 'none';
+      intro.style.display = 'none';
+      video.style.display = 'block';
+      video.play();
+
+      text.style.display = 'block';
+    }
+  </script></body>
+</html>
